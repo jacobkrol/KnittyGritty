@@ -1,0 +1,15 @@
+{
+  "short_name": "Knitty Gritty 🧶",
+  "name": "Knitty Gritty 🧶 - Stitch & Row Counter",
+  "icons": [
+    {
+      "src": "knitty-gritty-logo.svg",
+      "purpose": "maskable any",
+      "sizes": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#F95B69",
+  "background_color": "#F3F3F3"
+}

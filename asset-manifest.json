@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/KnittyGritty/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/KnittyGritty/static/js/main.45f8da4d.chunk.js",
+    "main.js.map": "/KnittyGritty/static/js/main.45f8da4d.chunk.js.map",
+    "runtime-main.js": "/KnittyGritty/static/js/runtime-main.6db8be86.js",
+    "runtime-main.js.map": "/KnittyGritty/static/js/runtime-main.6db8be86.js.map",
+    "static/js/2.06ba8732.chunk.js": "/KnittyGritty/static/js/2.06ba8732.chunk.js",
+    "static/js/2.06ba8732.chunk.js.map": "/KnittyGritty/static/js/2.06ba8732.chunk.js.map",
+    "index.html": "/KnittyGritty/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/KnittyGritty/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.06ba8732.chunk.js.LICENSE.txt": "/KnittyGritty/static/js/2.06ba8732.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6db8be86.js",
+    "static/js/2.06ba8732.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.45f8da4d.chunk.js"
+  ]
+}
