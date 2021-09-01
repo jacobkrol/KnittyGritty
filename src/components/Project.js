@@ -20,6 +20,7 @@ export default function Project({ data, project, navigateBack, setData }) {
     const [titleDisplay, setTitleDisplay] = useState(project?.titleDisplay ?? "");
     const [stitchCount, setStitchCount] = useState(project?.stitchCount ?? 0);
     const [rowCount, setRowCount] = useState(project?.rowCount ?? 0);
+    const [notes, setNotes] = useState(project?.notes ?? "");
     const [saved, setSaved] = useState(true);
 
     const verifyStitchReset = () => {
@@ -53,8 +54,13 @@ export default function Project({ data, project, navigateBack, setData }) {
         setTitleDisplay(title);
     }
 
+    const notesOnChange = (value) => {
+        setSaved(false);
+        setNotes(value);
+    }
+
     const saveCounts = () => {
-        const updatedProject = { ...project, stitchCount, rowCount, title, titleDisplay };
+        const updatedProject = { ...project, stitchCount, rowCount, title, titleDisplay, notes };
         const otherProjects = [...data].filter(p => p.id !== project.id);
         setData(otherProjects.concat({...updatedProject}));
         setSaved(true);
@@ -121,6 +127,18 @@ export default function Project({ data, project, navigateBack, setData }) {
                         <FiSave />
                     </Button>
                     <p id="save-text">{saved ? "Saved" : "Save Progress"}</p>
+                </Banner>
+                <Banner id="notes-banner" side="right">
+                    <div style={{width: '100%'}}>
+                        <p id="notes-header">Project Notes:</p>
+                        <textarea 
+                            id="notes" 
+                            value={notes} 
+                            rows="2" 
+                            onChange={(evt) => notesOnChange(evt.target.value)}
+                            placeholder="Click to enter project notes"
+                        />
+                    </div>
                 </Banner>
             </BannerContainer>
         </AppContainer>

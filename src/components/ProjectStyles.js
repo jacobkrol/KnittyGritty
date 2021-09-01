@@ -86,6 +86,17 @@ export const Banner = styled.div`
         margin-left: 0.25rem;
         color: ${({ theme }) => theme.themeLight} !important;
     }
+    #notes-header {
+        font-size: 1.5rem;
+        margin: 0.5rem 0 1rem;
+    }
+    #notes {
+        font-size: 1.5rem;
+        font-family: inherit;
+        border: 0;
+        width: 100%;
+        overflow-y: hidden;
+    }
 `
 export const Button = styled.div`
     cursor: pointer;
