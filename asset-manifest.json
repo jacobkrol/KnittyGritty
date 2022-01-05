@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/KnittyGritty/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/KnittyGritty/static/js/main.30d6a35e.chunk.js",
-    "main.js.map": "/KnittyGritty/static/js/main.30d6a35e.chunk.js.map",
+    "main.js": "/KnittyGritty/static/js/main.d369b244.chunk.js",
+    "main.js.map": "/KnittyGritty/static/js/main.d369b244.chunk.js.map",
     "runtime-main.js": "/KnittyGritty/static/js/runtime-main.6db8be86.js",
     "runtime-main.js.map": "/KnittyGritty/static/js/runtime-main.6db8be86.js.map",
     "static/js/2.91cf128c.chunk.js": "/KnittyGritty/static/js/2.91cf128c.chunk.js",
     "static/js/2.91cf128c.chunk.js.map": "/KnittyGritty/static/js/2.91cf128c.chunk.js.map",
     "index.html": "/KnittyGritty/index.html",
+    "service-worker.js": "/KnittyGritty/service-worker.js",
+    "service-worker.js.map": "/KnittyGritty/service-worker.js.map",
     "static/css/main.6dea0f05.chunk.css.map": "/KnittyGritty/static/css/main.6dea0f05.chunk.css.map",
     "static/js/2.91cf128c.chunk.js.LICENSE.txt": "/KnittyGritty/static/js/2.91cf128c.chunk.js.LICENSE.txt"
   },
@@ -15,6 +17,6 @@
     "static/js/runtime-main.6db8be86.js",
     "static/js/2.91cf128c.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.30d6a35e.chunk.js"
+    "static/js/main.d369b244.chunk.js"
   ]
 }
