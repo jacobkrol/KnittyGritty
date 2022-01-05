@@ -3,8 +3,28 @@
   "name": "Knitty Gritty 🧶 - Stitch & Row Counter",
   "icons": [
     {
+      "src": "icon32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "icon64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "icon192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
       "src": "knitty-gritty-logo.svg",
-      "purpose": "maskable any",
+      "purpose": "maskable",
       "sizes": "any"
     }
   ],
