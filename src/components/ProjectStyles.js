@@ -138,4 +138,5 @@ export const Select = styled.select`
     border-radius: 0;
     border: 2px solid #FCFCFC;
     border-bottom: ${({ theme }) => `2px solid ${theme.darkGray}`};
+    background-color: #FCFCFC;
 `
