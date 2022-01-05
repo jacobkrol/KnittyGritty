@@ -24,7 +24,7 @@
     },
     {
       "src": "knitty-gritty-logo.svg",
-      "purpose": "maskable any",
+      "purpose": "maskable",
       "sizes": "any"
     }
   ],
