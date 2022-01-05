@@ -5,7 +5,9 @@ import {
     BackArrow,
     BannerContainer,
     Banner,
-    Button
+    Button,
+    StitchCountGrid,
+    Select
 } from './ProjectStyles';
 import { 
     AiOutlinePlusCircle,
@@ -20,6 +22,7 @@ export default function Project({ data, project, navigateBack, setData }) {
     const [titleDisplay, setTitleDisplay] = useState(project?.titleDisplay ?? "");
     const [stitchCount, setStitchCount] = useState(project?.stitchCount ?? 0);
     const [rowCount, setRowCount] = useState(project?.rowCount ?? 0);
+    const [incrementBy, setIncrementBy] = useState(project?.incrementBy ?? 1);
     const [notes, setNotes] = useState(project?.notes ?? "");
     const [saved, setSaved] = useState(true);
 
@@ -60,7 +63,7 @@ export default function Project({ data, project, navigateBack, setData }) {
     }
 
     const saveCounts = () => {
-        const updatedProject = { ...project, stitchCount, rowCount, title, titleDisplay, notes };
+        const updatedProject = { ...project, stitchCount, rowCount, incrementBy, title, titleDisplay, notes };
         const otherProjects = [...data].filter(p => p.id !== project.id);
         setData(otherProjects.concat({...updatedProject}));
         setSaved(true);
@@ -84,20 +87,34 @@ export default function Project({ data, project, navigateBack, setData }) {
             </Header>
             <BannerContainer>
                 <Banner id="stitch-banner" side="left">
-                    <Button size="medium" id="stitch-reset" onClick={verifyStitchReset}>
-                        <ResetIcon />
-                    </Button>
-                    <Button size="medium" id="stitch-minus" 
-                        onClick={() => { 
-                            setSaved(false);
-                            setStitchCount(stitchCount > 0 ? stitchCount - 1 : 0);
-                        }}>
-                        <AiOutlineMinusCircle />
-                    </Button>
+                    <StitchCountGrid>
+                        <Button size="medium" id="stitch-reset" onClick={verifyStitchReset}>
+                            <ResetIcon />
+                        </Button>
+                        <Button size="medium" id="stitch-minus" 
+                            onClick={() => { 
+                                setSaved(false);
+                                setStitchCount(stitchCount >= incrementBy ? stitchCount - incrementBy : 0);
+                            }}>
+                            <AiOutlineMinusCircle />
+                        </Button>
+                        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gridColumn: "1 / span 2"}}>
+                            <p id="repeat-label">Repeat:</p>
+                            <Select value={incrementBy} 
+                                onChange={(evt) => {
+                                    setSaved(false);
+                                    setIncrementBy(Number(evt.target.value));
+                                }}>
+                                {Array(30).fill(0).map((x,i) => 
+                                    <option value={i+1} key={i+1}>{i+1}</option>
+                                )}
+                            </Select>
+                        </div>
+                    </StitchCountGrid>
                     <Button size="large" id="stitch-plus" 
                         onClick={() => {
                             setSaved(false);
-                            setStitchCount(stitchCount + 1);
+                            setStitchCount(stitchCount + incrementBy);
                         }}>
                         <AiOutlinePlusCircle />
                     </Button>

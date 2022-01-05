@@ -83,7 +83,7 @@ export const Banner = styled.div`
         color: ${({ theme }) => theme.darkGray};
     }
     #stitch-plus {
-        margin-left: 0.25rem;
+        margin: 0 0.25rem;
         color: ${({ theme }) => theme.themeLight} !important;
     }
     #notes-header {
@@ -97,11 +97,15 @@ export const Banner = styled.div`
         width: 100%;
         overflow-y: hidden;
     }
+    #repeat-label {
+        font-size: 1.25rem;
+        margin: 0.25rem 0.5rem;
+    }
 `
 export const Button = styled.div`
     cursor: pointer;
     & > svg {
-        height: ${props => props.size === "xsmall" ? "2rem" : props.size === "small" ? "3rem" : props.size === "medium" ? "4rem" : "7rem"};
+        height: ${props => props.size === "xsmall" ? "2rem" : props.size === "small" ? "3rem" : props.size === "medium" ? "4rem" : "8rem"};
         width: auto;
     }
 `
@@ -117,4 +121,21 @@ export const BackArrow = styled.div`
         width: auto;
         color: ${({ theme }) => theme.white};
     }
+`
+
+export const StitchCountGrid = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 62% 33%;
+    justify-items: center;
+    align-items: center;
+    gap: 0.4rem 0.75rem;
+`
+
+export const Select = styled.select`
+    padding: 0.25rem;
+    font-size: 1.15rem;
+    border-radius: 0;
+    border: 2px solid #FCFCFC;
+    border-bottom: ${({ theme }) => `2px solid ${theme.darkGray}`};
 `
